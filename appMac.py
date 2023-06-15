@@ -14,7 +14,7 @@ root.geometry("1000x1000")
 default_model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(default_model_id, torch_dtype=torch.float32)
 
-pipe = pipe.to("cuda")
+pipe = pipe.to("cpu")
 
 # Function to generate the image
 def generate_image():

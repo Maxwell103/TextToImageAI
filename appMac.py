@@ -43,8 +43,9 @@ def generate_image_on_enter(event):
 def update_model(*args):
     selected_model = model_var.get()  # Get the selected model from the drop-down box
     global pipe  # Use global pipe variable for model update
-    pipe = StableDiffusionPipeline.from_pretrained(selected_model, torch_dtype=torch.float16)
+    pipe = StableDiffusionPipeline.from_pretrained(selected_model, torch_dtype=torch.float32)  # Change here
     pipe = pipe.to("cpu")
+
 
 # Create input prompt entry
 prompt_label = tk.Label(root, text="Enter Prompt:")

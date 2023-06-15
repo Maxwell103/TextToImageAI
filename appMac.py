@@ -14,7 +14,7 @@ root.geometry("1000x1000")
 default_model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(default_model_id, torch_dtype=torch.float32)
 
-pipe = pipe.to("cpu")
+pipe = pipe.to("cuda")
 
 # Function to generate the image
 def generate_image():
@@ -44,7 +44,7 @@ def update_model(*args):
     selected_model = model_var.get()  # Get the selected model from the drop-down box
     global pipe  # Use global pipe variable for model update
     pipe = StableDiffusionPipeline.from_pretrained(selected_model, torch_dtype=torch.float16)
-    pipe = pipe.to("cuda")
+    pipe = pipe.to("cpu")
 
 # Create input prompt entry
 prompt_label = tk.Label(root, text="Enter Prompt:")

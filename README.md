@@ -8,12 +8,6 @@ Just need to install all the libraries and run one of the App files. It is a ste
 
 This project focuses on creating a Text-To-Image application utilizing Hugging Face models. The app is built with Streamlit, providing a user-friendly interface for generating images from text descriptions. To get started, simply install the required libraries and run one of the provided App files.
 
-## Project Information
-
-- **Repository:** [GitHub Repository](https://github.com/yourusername/your-repository)
-- **Last Commit:** 1 hour ago
-- **Author:** Your Name
-
 ## Project Structure
 
 The project repository includes the following files:
